@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://b4n6wu27h10ss"]
+
+[ext_resource type="Script" uid="uid://hw5mpuchf6ym" path="res://item_holder.gd" id="1_uep05"]
+[ext_resource type="PackedScene" uid="uid://chwd80mpco0l1" path="res://matches.tscn" id="2_mo0jf"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mo0jf"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_uep05"]
+
+[node name="crate" type="RigidBody3D"]
+script = ExtResource("1_uep05")
+item = ExtResource("2_mo0jf")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_mo0jf")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_uep05")

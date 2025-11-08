@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://chwd80mpco0l1"]
+
+[ext_resource type="Script" uid="uid://hw5mpuchf6ym" path="res://item_holder.gd" id="1_nscaf"]
+[ext_resource type="PackedScene" uid="uid://d1ctipry36mxo" path="res://branch.tscn" id="2_rm58m"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ka75i"]
+size = Vector3(0.2, 0.1, 0.25)
+
+[sub_resource type="BoxMesh" id="BoxMesh_uep05"]
+
+[node name="matches" type="RigidBody3D"]
+mass = 0.1
+script = ExtResource("1_nscaf")
+item = ExtResource("2_rm58m")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_ka75i")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.15, 0, 0, 0, 0.1, 0, 0, 0, 0.2, 0, 0, 0)
+mesh = SubResource("BoxMesh_uep05")

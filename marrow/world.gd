@@ -1,6 +1,6 @@
 extends Node3D
 
-var day_length = 12 * 60
+var day_length = 12 * 10
 var day_time
 var day_dir = 1
 
