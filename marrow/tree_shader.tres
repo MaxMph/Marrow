@@ -1,0 +1,13 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://dcwxppc4b7psn"]
+
+[ext_resource type="Shader" uid="uid://wmwt718nye7u" path="res://tree.gdshader" id="1_e4sj4"]
+[ext_resource type="Texture2D" uid="uid://d1q53f1wsp7ia" path="res://dark-tree-bark-1024x1024-256x256.png" id="2_3umfw"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_e4sj4")
+shader_parameter/albedo_tex = ExtResource("2_3umfw")
+shader_parameter/tint_col = Color(0.82477456, 0.77199066, 0.50862473, 1)
+shader_parameter/fade_start = 0.0
+shader_parameter/fade_end = 10.0
+shader_parameter/tint_str = 2.0
